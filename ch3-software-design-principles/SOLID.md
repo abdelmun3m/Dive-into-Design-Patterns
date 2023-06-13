@@ -48,20 +48,19 @@
       7. a subclass shoudn't change te values of private fields of th superclass.
 
 ## 4-(I) Interface Segregation Princible
-    
-    Clients shoudn't be forced to depend on methods they don't need 
-    - Try to make your interfaces narrowenugh 
-    - Break down "fat" interfaces into more geanuall and specific ones.
-    
+  Clients shoudn't be forced to depend on methods they don't need 
+  - Try to make your interfaces narrowenugh 
+  - Break down "fat" interfaces into more geanuall and specific ones.
+
     
 ## 5-(D) Dependency Inversion Principles 
-    **High level** classes shoudn't depend on the **low-level** classes.
-    - **Low Level** classes: implment basic operations such as disk managent an DB interactions.
-    - **High Level** Classes: contains complex busniess logic that direct low-level classes to do something.
-    - Both levels should depend on abstractions
-    - Abstractions shudn't depend on details 
-    - Details sould depend on Abstractions
-    - make the low-level classes depend on (directed by) the high level classes 
-    - it is called inversion because it invert the dependency from **High level -> Low Level** to **High Level <- Low Level** (-> menns depends on)
+  **High level** classes shoudn't depend on the **low-level** classes.
+  - **Low Level** classes: implment basic operations such as disk managent an DB interactions.
+  - **High Level** Classes: contains complex busniess logic that direct low-level classes to do something.
+  - Both levels should depend on abstractions
+  - Abstractions shudn't depend on details 
+  - Details sould depend on Abstractions
+  - make the low-level classes depend on (directed by) the high level classes 
+  - it is called inversion because it invert the dependency from **High level -> Low Level** to **High Level <- Low Level** (-> menns depends on)
 
 

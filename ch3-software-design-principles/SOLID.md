@@ -1,24 +1,24 @@
 # SOLID Principles 
-  A mnemonic for 5 design principles intend to make software design more undestandable , flexable and maintable
+  A mnemonic for 5 design principles intended to make software design more understandable, flexible and maintainable
 
 ## 1-(S) Single Responsibility Princible 
-  - Try to make every class responsible for a single part of the funcionality provided by the software.
-  - Make the esponsibility entirely encapsulated by that class
-  - The main goal of this princible is reducing the complexity.
+  - Try to make every class responsible for a single part of the functionality provided by the software.
+  - Make the responsibility entirely encapsulated by that class
+  - The main goal of this principle is reducing the complexity.
 
 ## 2-(O) Open/Close Principle
   Classes should be **Open** for **Externsion** but **Closed** for **Modefications** 
-  - The main goal is to protect the current code from breaking when changing or implmenting a new features
-  - **Open** means that the calss can be extended producing a subclass and do whatever yu want with the new subclass
-  - **Close** means that the if it is 100% ready for be used by other classes (developed, tested and reviewed).
-  - It dosn't mean that subclass will be responsible to fix superclass's bug
+  - The main goal is to protect the current code from breaking when changing or implementing new features
+  - **Open** means that the class can be extended producing a subclass and do whatever you want with the new subclass
+  - **Close** means that the if it is 100% ready to be used by other classes (developed, tested and reviewed).
+  - It doesn't mean that subclass will be responsible to fix the superclass's bug
   
 ## 3-(L) Liskove Substitution Princible
-  When extending a class make sure that the new subclass is compatible with the super class.
-  - You shoud be able to pass an object of the subclass in place of an object of the super class
-  - When overriding a method, extend the base class behavior rather thatn replacing it totally.
-  - It is a set of checkes that should be validated when creating a sub class 
-      1. **Parameter** types in a method of **subclass** should match or be more **abstract** than parameters types in the metod of the superclass.
+  When extending a class make sure that the new subclass is compatible with the superclass.
+  - You should be able to pass an object of the subclass in place of an object of the superclass
+  - When overriding a method, extend the base class behaviour rather than replace it.
+  - It is a set of checks that should be validated when creating a subclass 
+      1. **Parameter** types in a method of **subclass** should match or be more **abstract** than parameter types in the method of the superclass.
            ```
             Class super:
                 def feed(cat : Cat):
@@ -41,26 +41,26 @@
               def feed(animal: Animal):
                 pass
           ```
-      3. A method in the subclass shoudn't throw types of exceptions which the base metod isn't expected to throw.
-      4. A subclass shoudn't strengthen pre-condetions: if you expect have a supermethod that expects in the param **int** don't extend it and change the behavior to only accept positive number only.
-      5. A subclass shoudn't weeken the post-condetions: if your super class close db connections after opening it, don't extend the method and keep the connections open for reuse.
-      6. Invariants of superclass must be preserved: invariantes are condetions in which an object makes sense **_don't break you superclass behavior_**.
-      7. a subclass shoudn't change te values of private fields of th superclass.
+      3. A method in the subclass shouldn't throw types of exceptions which the base method isn't expected to throw.
+      4. A subclass shouldn't strengthen pre-conditions: if you expect to have a supermethod that expects in the param **int** don't extend it and change the behavior to only accept positive numbers.
+      5. A subclass shouldn't lessen the post-conditions: if your superclass closes db connections after opening it, don't extend the method and keep the connections open for reuse.
+      6. Invariants of superclass must be preserved: invariants are conditions in which an object makes sense **_don't break your superclass behaviour_**.
+      7. a subclass shouldn't change the values of private fields of the superclass.
 
 ## 4-(I) Interface Segregation Princible
-  Clients shoudn't be forced to depend on methods they don't need 
-  - Try to make your interfaces narrowenugh 
-  - Break down "fat" interfaces into more geanuall and specific ones.
+  Clients shouldn't be forced to depend on methods they don't need 
+  - Try to make your interfaces narrow enough 
+  - Break down "fat" interfaces into more granular and specific ones.
 
     
 ## 5-(D) Dependency Inversion Principles 
   **High level** classes shoudn't depend on the **low-level** classes.
-  - **Low Level** classes: implment basic operations such as disk managent an DB interactions.
-  - **High Level** Classes: contains complex busniess logic that direct low-level classes to do something.
+  - **Low-Level** classes: implement basic operations such as disk management and DB interactions.
+  - **High Level** Classes: contains complex business logic that directs low-level classes to do something.
   - Both levels should depend on abstractions
-  - Abstractions shudn't depend on details 
-  - Details sould depend on Abstractions
-  - make the low-level classes depend on (directed by) the high level classes 
-  - it is called inversion because it invert the dependency from **High level -> Low Level** to **High Level <- Low Level** (-> menns depends on)
+  - Abstractions shouldn't depend on details 
+  - Details should depend on Abstractions
+  - make the low-level classes depend on (directed by) the high-level classes 
+  - it is called inversion because it inverts the dependency from **High level -> Low Level** to **High Level <- Low Level** (-> means depends on)
 
 

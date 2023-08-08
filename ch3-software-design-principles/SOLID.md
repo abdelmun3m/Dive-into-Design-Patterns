@@ -10,7 +10,7 @@
   Classes should be **Open** for **Externsion** but **Closed** for **Modefications** 
   - The main goal is to protect the current code from breaking when changing or implementing new features
   - **Open** means that the class can be extended producing a subclass and do whatever you want with the new subclass
-  - **Close** means that the if it is 100% ready to be used by other classes (developed, tested and reviewed).
+  - **Close** means that it is 100% ready to be used by other classes (developed, tested and reviewed).
   - It doesn't mean that subclass will be responsible to fix the superclass's bug
   
 ## 3-(L) Liskove Substitution Princible
@@ -36,9 +36,9 @@
               def feed(cat : Cat) -> Animal:
                 pass
 
-          Class sub(super) -> Cat:
+          Class sub(super):
               # where Cat is an Animal 
-              def feed(animal: Animal):
+              def feed(animal: Animal) -> Cat:
                 pass
           ```
       3. A method in the subclass shouldn't throw types of exceptions which the base method isn't expected to throw.
